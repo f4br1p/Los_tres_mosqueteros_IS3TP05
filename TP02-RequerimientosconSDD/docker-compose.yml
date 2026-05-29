@@ -15,7 +15,7 @@ services:
     depends_on:
       - db # Asegura que la BD inicie antes que la app
     volumes:
-      - ./backend:/usr/src/app # <-- Cambiar "." por "./backend"
+      - .:/usr/src/app # Sincroniza tus archivos locales con el contenedor
       - /usr/src/app/node_modules # Evita sobreescribir los módulos instalados
 
   # Servicio 2: Persistencia (Base de Datos PostgreSQL)
